@@ -25,3 +25,4 @@ Manifest.toml
 
 Progresos/data/mnist_train.csv
 Progresos/data/mnist_test.csv
+*.csv
