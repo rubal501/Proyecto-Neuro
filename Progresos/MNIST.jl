@@ -11,7 +11,7 @@ function vectorizar(valor)
 end
 
 
-function obtener_datos(validation)
+function obtener_datos(validation = false)
     datos_entrenamiento = readdlm("data/mnist_train.csv", ',',Int64)
     datos_prueba = readdlm("data/mnist_test.csv", ',',Int64)
     if validation == false
