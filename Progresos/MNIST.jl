@@ -1,64 +1,44 @@
-
-
-module MNIST
 using CSV
 using DelimitedFiles
- 
-function vectorizar(valor)
-    vector =  zeros(Int64, 10)
-    vector[valor+1] = valor
-    return vector 
-end
+using StatsBase
+using DataFrames
 
 
-function obtener_datos(validation = false)
-    datos_entrenamiento = readdlm("data/mnist_train.csv", ',',Int64)
-    datos_prueba = readdlm("data/mnist_test.csv", ',',Int64)
-    if validation == false
-        arreglo_entrenamiento =  Array{Tuple{Array{Int64,1},Array{Int64,1}},1}()
-        #println("llegue")
-        arreglo_prueba = Array{Tuple{Array{Int64,1},Int64},1}()
-        #println("llegue2")
-        for i in 1:60000
-            push!(arreglo_entrenamiento, ([datos_entrenamiento[i,n] for n in 2:785], vectorizar(datos_entrenamiento[i,1])))
-            #Estas lineas son para debuggear
-            #println("-----------------------------------")
-            #println(arreglo_entrenamiento)
+function obtener_muestras()
+    datos_prueba = readdlm("data/fashion-mnist_test.csv", ',',Int16)
+    println(typeof(datos_prueba))
+    println(datos_prueba[1])
+    for e in 0:9
+        println(e)
+        entradas = []
+        contador = 1
+        for indice in 1:10000
+            if datos_prueba[indice][1] == e
+                #println(datos_prueba[indice])
+                push!(entradas, indice)
+            end
+            
         end
-    
-        for j in 1:10000
-            push!(arreglo_prueba, ([datos_prueba[j,n] for n in 2:785], datos_prueba[j,1]))
-        #Estas lineas son para debuggear
-        #println("-----------------------------------")
-        #println(arreglo_prueba)
-        return (arreglo_entrenamiento, arreglo_prueba)
-        end
-    elseif validation == true
-        arreglo_entrenamiento =  Array{Tuple{Array{Int64,1},Array{Int64,1}},1}()
-        arreglo_validacion =  Array{Tuple{Array{Int64,1},Array{Int64,1}},1}()
-        #println("llegue")
-        arreglo_prueba = Array{Tuple{Array{Int64,1},Int64},1}()
-        #println("llegue2")
-        for i in 1:0000
-            push!(arreglo_entrenamiento, ([datos_entrenamiento[i,n] for n in 2:785], vectorizar(datos_entrenamiento[i,1])))
-            #Estas lineas son para debuggear
-            #println("-----------------------------------")
-            #println(arreglo_entrenamiento)
+        println("el tamano del vector es ", length(entradas) )
+        println(datos_prueba[1,2:785] )
+        
+        #println(entradas)
+
+        indices_muestras = sample(1:length(entradas), 10, replace = false)
+
+        for i in indices_muestras
+            io = open("muestras.csv", "a")
+            println("meti al csv este dato  ", i)   
+            tmp = datos_prueba[i,2:785]
+            writedlm( io, transpose(tmp), ',')
+            close(io)  
         end
         
-        for k in 1:10000
-            push!(arreglo_validacion, ([datos_entrenamiento[i,n] for n in 2:785], vectorizar(datos_entrenamiento[i,1])))
-        end
-        for j in 1:10000
-            push!(arreglo_prueba, ([datos_prueba[j,n] for n in 2:785], datos_prueba[j,1]))
-        #Estas lineas son para debuggear
-        #println("-----------------------------------")
-        #println(arreglo_prueba)
-        return (arreglo_entrenamiento,arreglo_validacion, arreglo_prueba)
-        end
-    
-    end
 
+    end
 end
 
-end # module
+obtener_muestras()
+
+
+ # module
