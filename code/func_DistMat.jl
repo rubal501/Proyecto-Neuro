@@ -1,4 +1,3 @@
-
 # Saca una muestra de training data
 # come el tamaño de  la muestra deseada
 
@@ -27,32 +26,32 @@ function muestrea( size )
 end
 
 # Calcula los vectores que representan neuronas
-function α_neuronas(Γ::Red_Neu, muestra, output::Bool=false)
+function α_neuronas(gamma::Red_Neu, muestra, output::Bool=false)
     neuronas = 0
     tabla = []
     # Hace feedforward a cada uno de los datos
     for dato in muestra
         x, y = dato
         # calcula el vector de activaciones
-        zs, acts = Γ(x, true)
+        zs, acts = gamma(x, true)
         if output
-            neuronas = sum(Γ.tamanos) - Γ.tamanos[1]
+            neuronas = sum(gamma.tamanos) - gamma.tamanos[1]
             acts = acts[2:end]
         else
-            neuronas = sum(Γ.tamanos) - Γ.tamanos[1] - Γ.tamanos[end]
+            neuronas = sum(gamma.tamanos) - gamma.tamanos[1] - gamma.tamanos[end]
             acts = acts[2:end-1]
         end
-        Acts = zeros(Float64, neuronas)
+        vector_activaciones = zeros(Float64, neuronas)
          i = 1
          for k in eachindex(acts)
              for j in eachindex( acts[k] )
-                 Acts[i] = acts[k][j]
+                 vector_activaciones[i] = acts[k][j]
                  i += 1
              end
          end
-         # Acts es el vector de activaciones
+         # vector_activaciones es el vector de activaciones
          # lo agregamos a la tabla
-         push!(tabla,  Acts)
+         push!(tabla,  vector_activaciones)
      end
      # Construimos los alphas
      A = []
@@ -65,6 +64,37 @@ function α_neuronas(Γ::Red_Neu, muestra, output::Bool=false)
          push!(A, αᵢ)
      end
      return A
+end
+
+function Betta_neuronas(gamma::Red_Neu, muestra, output::Bool=false)
+#Esta funcion obtiene los vectores con el nuevo metodo que se discutio con Raziel el miercoles pasado
+    neuronas = 0
+    tabla = []
+    # Hace feedforward a cada uno de los datos
+    for dato in muestra
+        x, y = dato
+        # calcula el vector de activaciones
+        zs, acts = gamma(x, true)
+        if output
+            neuronas = sum(gamma.tamanos) - gamma.tamanos[1]
+            acts = acts[2:end]
+        else
+            neuronas = sum(gamma.tamanos) - gamma.tamanos[1] - gamma.tamanos[end]
+            acts = acts[2:end-1]
+        end
+        vector_activaciones = zeros(Float64, neuronas)
+         i = 1
+         for k in eachindex(acts)
+             for j in eachindex( acts[k] )
+                 vector_activaciones[i] = acts[k][j]
+                 i += 1
+             end
+         end
+         # vector_activaciones es el vector de activaciones
+         # lo agregamos a la tabla
+         push!(tabla,  vector_activaciones)
+     end
+     return tabla
 end
 
 # calcula la matriz de distancia
@@ -84,13 +114,17 @@ end
 # Come el resultado de experimenta y calcula
 # las matrices de distancia para todas las epocas
 
-function exp_DistMat( epocas_red, norma ,size )
+function exp_DistMat( epocas_red, norma ,size, metodo )
     # saca una muestra
     muestra = muestrea(size)
     matrices = []
     # Calcula matriz de distancia para cada epoca
-    for Γ in epocas_red
-        A = α_neuronas(Γ, muestra)
+    for gamma in epocas_red
+        if metodo == "alpha"
+            A = α_neuronas(gamma, muestra)
+        elseif metodo == "betta"
+            A = Betta_neuronas(gamma, muestra)
+        end
         M = DistMatrix( A, norma )
         push!(matrices, M)
     end

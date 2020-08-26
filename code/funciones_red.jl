@@ -267,11 +267,17 @@ end
 function salva_red(red::Red_Neu, epoch, ruta)
     #Esta funcion recibe como argumentos a una red neuronal, la epoca de entrenamiento
     # la que se encuentra y la ruta en la cual se deben de guardar los archivos de las activaciones
-    name = ruta* "epoch_"* string(epoch)* ".csv"
+    name = ruta* "/epoch_"* string(epoch)* ".csv"
+    println(length(red.num_layers))
     for i in 1:(red.num_layers-1)
         io = open(name, "a")
         #Concatenamos la matriz de pesos con el vector columna de los biases 
-        data = hcat(red.biases[i], red.weights[1])
+        bias = red.biases[i]
+        #Se forma un vector de pesos modificando la forma de la matriz de pesos
+        weights = reshape(red.weights[i], :,1)
+        #Se concatena el vector formado con la matriz de pesos de la capa con el vector de pesos 
+        data = transpose(vcat(bias, weights))
+        #Transponemos el vector para poder almacenarlo como una sola fila en nuestro archivo csv
         writedlm( io, data, ',')
         close(io)
     end
