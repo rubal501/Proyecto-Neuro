@@ -2,9 +2,57 @@
 └ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:73
 ┌ Info: Identificador de experimento =  experimento_1
 └ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:74
-┌ Info: Fecha de inicializacion =  2020-08-26T14:29:27.931
+┌ Info: Fecha de inicializacion =  2020-09-01T00:09:00.517
 └ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:75
 ┌ Info: Arquitectura  =  [784, 30, 10]
 └ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:76
 ┌ Info: performance deseado = 95
 └ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:77
+┌ Info: Entrenamiento Iniciado en la fecha =  2020-09-01T00:09:02.889
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:207
+┌ Info: Epoca terminada en la fecha =  2020-09-01T00:09:20.484
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:236
+┌ Info: performance logrado en epoca:  1 = 90.84 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:237
+┌ Info: valor de la eta:  4.234372270836168
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:238
+┌ Info: Epoca terminada en la fecha =  2020-09-01T00:09:36.161
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:236
+┌ Info: performance logrado en epoca:  2 = 91.64 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:237
+┌ Info: valor de la eta:  0.004432396338378801
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:238
+┌ Info: Epoca terminada en la fecha =  2020-09-01T00:09:51.647
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:236
+┌ Info: performance logrado en epoca:  3 = 91.9 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:237
+┌ Info: valor de la eta:  0.004141012702175688
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:238
+┌ Info: Epoca terminada en la fecha =  2020-09-01T00:10:07.076
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:236
+┌ Info: performance logrado en epoca:  4 = 92.12 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:237
+┌ Info: valor de la eta:  0.004050500168856325
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:238
+┌ Info: Epoca terminada en la fecha =  2020-09-01T00:10:22.621
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:236
+┌ Info: performance logrado en epoca:  5 = 92.17999999999999 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:237
+┌ Info: valor de la eta:  0.003975459631454469
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:238
+┌ Info: Epoca terminada en la fecha =  2020-09-01T00:10:38.109
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:236
+┌ Info: performance logrado en epoca:  6 = 92.17999999999999 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:237
+┌ Info: valor de la eta:  0.003955236400407062
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:238
+┌ Info: Epoca terminada en la fecha =  2020-09-01T00:10:53.529
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:236
+┌ Info: performance logrado en epoca:  7 = 92.19000000000001 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:237
+┌ Info: valor de la eta:  0.003955236400407062
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:238
+┌ Info: El aprendizaje se estanco en la epoca:  7con el desempeno: 92.19000000000001
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:218
+┌ Info: Entrenamiento terminado en la fecha =  2020-09-01T00:10:53.535
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242

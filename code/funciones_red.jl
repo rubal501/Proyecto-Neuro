@@ -62,6 +62,11 @@ function (red::Red_Neu)(a, partes::Bool = false)
         push!(zs, "ola k ase")
     end
     for i in 1:(red.num_layers-1)
+       # println(size(red.weights[i]))
+        #println(size(a))
+        #println(size(red.weights[i]*a))
+        #println(typeof(red.biases[i]))
+        #println(size(red.biases[i]))
         z = red.weights[i]*a + red.biases[i]
         a = sigmoid.(z)
         if partes
@@ -88,19 +93,19 @@ function (red::Red_Neu)(x , y)
     zs, activaciones = red( x, true)
 
     #Todos los indices mas uno en activacion y zs
-    δ = cost_derivative.( activaciones[red.num_layers], y ) .* sigmoid.(zs[red.num_layers], true)
-
+    delta = cost_derivative.( activaciones[red.num_layers], y ) 
+    
     # Primera capa de errores
-    nabla.biases[nabla.num_layers-1] = δ
-    nabla.weights[nabla.num_layers-1] = δ*transpose(activaciones[nabla.num_layers-1])
+    nabla.biases[nabla.num_layers-1] = delta
+    nabla.weights[nabla.num_layers-1] = delta*transpose(activaciones[nabla.num_layers-1])
 
     # Retro-propaga
     for l in 2:(red.num_layers-1)
         z = zs[red.num_layers-l+1]
         sp = sigmoid.(z,true)
-        δ = sp .* (transpose( red.weights[red.num_layers-l+1]) * δ)
-        nabla.biases[red.num_layers-l] = δ
-        nabla.weights[red.num_layers-l] = δ*transpose( activaciones[red.num_layers-l] )
+        delta = sp .* (transpose( red.weights[red.num_layers-l+1]) * delta)
+        nabla.biases[red.num_layers-l] = delta
+        nabla.weights[red.num_layers-l] = delta*transpose( activaciones[red.num_layers-l] )
     end
     return nabla
 end
@@ -212,7 +217,6 @@ end
 
 #=esta aplica el feedforward con las 100 imagenes pre seleccionadas 
 y guarda los valores de activacion en cada una de las iteracionesjj
-=#
 function experimento(red::Red_Neu, epoch)
     datos_experimento = readdlm("muestras.csv", ',',Int16)
     cont = [ [] for i in 1:red.num_layers ]
@@ -245,8 +249,10 @@ function experimento(red::Red_Neu, epoch)
         end
     end
 
+
 end
 
+=#
 # Stochastic Gradient Descent
 function SGD_ϐ( gamma::Red_Neu, training_data, mini_batch_size, eta)
     n = length(training_data)
@@ -268,7 +274,7 @@ function salva_red(red::Red_Neu, epoch, ruta)
     #Esta funcion recibe como argumentos a una red neuronal, la epoca de entrenamiento
     # la que se encuentra y la ruta en la cual se deben de guardar los archivos de las activaciones
     name = ruta* "/epoch_"* string(epoch)* ".csv"
-    println(length(red.num_layers))
+    #println(length(red.num_layers))
     for i in 1:(red.num_layers-1)
         io = open(name, "a")
         #Concatenamos la matriz de pesos con el vector columna de los biases 

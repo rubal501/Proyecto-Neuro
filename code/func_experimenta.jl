@@ -76,21 +76,24 @@ function experimento_simple( arquitectura, perf_deseado, id,; max_ejec = 20, tam
     @info("Arquitectura  =  " * string(arquitectura))
     @info("performance deseado = " * string( perf_deseado))
     flush(io)
-    close(io)
     #Fin de la creacion de archivos
 
-    performance, epocas = entrenamiento_caida( arquitectura, perf_deseado, max_ejec,id )
-
+    performance, epocas = entrenamiento_caida( arquitectura, perf_deseado, max_ejec,id,io )
+    flush(io)
+    close(io)
 end
 
 function recuperar_red(tamanos, id,num_epochs)
     redes = Red_Neu[]
-    for epoch in 1:num_epochs
-        ruta = "data/experimental/experimento_"*string(id)* "/epoch_"* string(epoch)* ".csv"
-        data = readdlm(ruta, ",")
+    for epoch in 0:(num_epochs-1)
+        ruta = "data/experimental/experimento_"*string(id)* "/pesos/epoch_"* string(epoch)* ".csv"
+        
+        data = readdlm(ruta, ',')
+        println("archivo abierto")
+
         array_bias = []
         array_weigths = []
-        for lay in 1:length(tamanos-1)
+        for lay in 1:(length(tamanos)-1)
             prev = Float64[]
             for element in data[lay,:]
                 if typeof(element) == Float64
@@ -98,22 +101,21 @@ function recuperar_red(tamanos, id,num_epochs)
                 end
             end
             prev = reshape(prev,:,1) #Lo convertimos en un vector columna
-            bias = prev[tamanos[lay+1],:]
-            weight = reshape(prev[tamanos[lay+1]+1:length(perv)], tamanos[lay+1], tamanos[lay])
-            append!(array_bias, bias)
-            append!(array_weigths, weight)
+            bias = prev[1:tamanos[lay+1]]
+            println("el tipo del vias es:  " * string(typeof(bias)))
+            weight = reshape(prev[tamanos[lay+1]+1:length(prev)], tamanos[lay+1], tamanos[lay])
+            push!(array_bias, bias)
+            push!(array_weigths, weight)
         end
         nueva_red = Red_Neu(length(tamanos), tamanos, array_bias, array_weigths)
         push!(redes, nueva_red)
     end
     return redes
-
-    io =  open("data/experimental/experimento_"*string(id)* "/epoch_"* string(epoch)* ".csv", "w+")
     
 end
 
 
-function experimento_preentrenado(redes, metodo, norma)
+function experimento_preentrenado(redes, metodo, norma, tamano_muestra, arquitectura, performance; dimensiones =1)
     #=
     Esta funcion recibe como argumento un array con los tamanos de cada uno de las capas,
     un array de matrices de pesos y un arrray de vectores de biases
@@ -126,7 +128,7 @@ function experimento_preentrenado(redes, metodo, norma)
         c = eirene(matriz, maxdim = dimensiones)
         push!(eirene_objs, c)
     end
-
+    epocas = redes
     return Exp_Red_Neu(arquitectura, performance, epocas, dist_mat, eirene_objs)
     
     
@@ -172,10 +174,23 @@ end
 
 function caida(perf)
     #Esta funcion nos perimte hacer una caida exponencial de la eta
-    return exp(-(0.08)*perf)
+    return 10* exp(-1*(0.085)*perf)
 end
 
-function entrenamiento_caida(tamanos, wanted_performance, max_ejecutions, id )
+function check_buffer(buffer)
+    #Recibe como argumento un array y valor escalar del mismo tipo,
+    #revisas si todas las entradas del buffer son iguales al elemento
+    criterio = abs(maximum(buffer) - minimum(buffer) ) <= .7
+    return criterio
+end
+
+function update_buffer(buffer, new_element)
+    popfirst!(buffer)
+    new_buffer = push!(buffer, new_element)
+    return new_buffer
+end
+
+function entrenamiento_caida(tamanos, wanted_performance, max_ejecutions, id, logger )
     #Constantes de la ejecución
     ruta_pesos = "data/experimental/experimento_"*string(id)* "/pesos"
     mini_batch_size = 20
@@ -183,17 +198,29 @@ function entrenamiento_caida(tamanos, wanted_performance, max_ejecutions, id )
     gamma = crea_red(tamanos)
     # Y documenta toda su ejecución
     # Contadores
+    # TODO hacer que el tamano del buffer sea dinamico
+    tamano_buffer = 5
+    buffer = ones(tamano_buffer)
     epoca = 0
     performance = evalua(gamma, validation_data, epoca)
     salva_red(gamma, 0, ruta_pesos)
-
+    @info("Entrenamiento Iniciado en la fecha =  " *string(now())  )
     capturas_red = [] # Capturas de la red
     capturas_perf = []
     push!(capturas_red, gamma) # Guarda la red recien creada
     push!(capturas_perf,performance )
+    
 
 
-    while( performance <= wanted_performance && epoca < max_ejecutions)
+    while( performance <= wanted_performance && epoca < max_ejecutions )
+            if check_buffer(buffer) == true && epoca > (tamano_buffer + 1)
+                println("Fin del entrenamiento")
+                @info("El aprendizaje se estanco en la epoca:  " * string(epoca) *"con el desempeno: " *string(performance))
+                #Se borran las epocas donde SGD se quedo estancado 
+                deleteat!(capturas_perf, (epoca-(tamano_buffer-2)):epoca)
+                break
+            end
+            println(check_buffer(buffer))
             # Haz un entrenamiento
             eta = caida(performance)
             gamma = SGD_ϐ(gamma, training_data, mini_batch_size, eta)
@@ -201,14 +228,19 @@ function entrenamiento_caida(tamanos, wanted_performance, max_ejecutions, id )
             println("red salvada ")
             # Cuenta las épocas
             epoca += 1
-
             # Evalua el performance
             performance = evalua(gamma, validation_data, epoca)
             # Guarda una captura de la red
             push!(capturas_red, gamma)
             append!(capturas_perf, performance)
+            @info("Epoca terminada en la fecha =  " *string(now())  )
+            @info("performance logrado en epoca:  " *string(epoca) * " = " * string( performance) *" por ciento"  )
+            @info("valor de la eta:  " *string(eta))
             #println( performance,  epoca )
+            update_buffer(buffer, performance)
     end
+    @info("Entrenamiento terminado en la fecha =  " *string(now())  )
+    flush(logger)
     #println("Terminé :3")
     return capturas_perf, capturas_red
 end
@@ -219,7 +251,7 @@ function evalua(gamma, validation_data, epoca)
         correctos = evaluation(gamma, validation_data)
         n_data = length(validation_data)
 		percent = convert(Int,floor((correctos/n_data)*100))
-		print( "Epoca ", epoca," ", percent,"% :: "  )
+		println( "Epoca ", epoca," ", percent,"% :: "  )
         #print("Epoca ", epoca," : " ,correctos,"/", n_data,":::" )
         return (correctos/n_data)*100
 end

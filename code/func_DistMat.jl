@@ -1,5 +1,6 @@
 # Saca una muestra de training data
 # come el tamaño de  la muestra deseada
+using DelimitedFiles
 
 function find_index(n)
     return findall(x -> findmax(x)[2] == n, [training_data[i][2] for i in 1:50000] )
@@ -75,20 +76,11 @@ function Betta_neuronas(gamma::Red_Neu, muestra, output::Bool=false)
         x, y = dato
         # calcula el vector de activaciones
         zs, acts = gamma(x, true)
-        if output
-            neuronas = sum(gamma.tamanos) - gamma.tamanos[1]
-            acts = acts[2:end]
-        else
-            neuronas = sum(gamma.tamanos) - gamma.tamanos[1] - gamma.tamanos[end]
-            acts = acts[2:end-1]
-        end
-        vector_activaciones = zeros(Float64, neuronas)
+        
+        vector_activaciones = Float64[]
          i = 1
          for k in eachindex(acts)
-             for j in eachindex( acts[k] )
-                 vector_activaciones[i] = acts[k][j]
-                 i += 1
-             end
+            vcat(vector_activaciones, acts[k])
          end
          # vector_activaciones es el vector de activaciones
          # lo agregamos a la tabla
@@ -98,16 +90,16 @@ function Betta_neuronas(gamma::Red_Neu, muestra, output::Bool=false)
 end
 
 # calcula la matriz de distancia
-function DistMatrix( Å,  F::Function )
-    neuronas = length( Å )
-    𝕄 = zeros(Float64, neuronas,  neuronas)
+function DistMatrix( A,  F::Function )
+    neuronas = length( A )
+    M= zeros(Float64, neuronas,  neuronas)
 
     for i in 1:neuronas
         for j in 1:neuronas
-            𝕄[i,j] = F( Å[i] - Å[j] )
+            M[i,j] = F( A[i] - A[j] )
         end
     end
-    return 𝕄
+    return M
 end
 
 
@@ -129,4 +121,13 @@ function exp_DistMat( epocas_red, norma ,size, metodo )
         push!(matrices, M)
     end
     return matrices
+end
+
+
+function save_vectors(array_vectors, id)
+	for vec in array_vectors 
+		io = open(string(id), "a")
+		vec = reshape(vec, )
+	end
+
 end
