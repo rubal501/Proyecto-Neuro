@@ -28,9 +28,19 @@ limitado a un maximo de 60 epocas.
 | experimento_experimento_3 | [784,300,10]            | 93.89                 | 7                       |
 | experimento_experimento_4 | [784,12,12,12,12,12,10] | 69.0                  | 57                      |
 
-
-## TODO
-
+Los pesos y sesgos de cada una de las redes a lo largo del experimento fueron guardados en archivos csv almacenados en la carpeta de `Proyecto-Neuro/data/experimental/experimento_experimento_x/activaciones` de cada experimento.
+Tambien a lo largo del entrenamiento cada experimento guardo informacion como el desempeno en cada una de las epocas en cada
+uno de los archivos `log.txt`.
 ### Generacion de vectores de activacion
 
-### Analisis de datos 
+Los  alpha vectores fueron generados con el metodo usado en el proyecto final en el curso de matematicas aplicadas.
+Los betta vectores fueron generados con el nuevo metodo, los cuales tienen como entradas la activacion de cada una de 
+las neuronas dado un elemento de la muestra.
+### Analisis de datos
+Hasta este momento solo se ha probado con una muestra de 20 elementos, es decir 2 elementos de cada clase. El calculo de la 
+homologia persistente se ha logrado en tiempo aceptable en los dos primeros experimentos, sin embargo en los ultimos tarda mucho tiempo. Los diagramas de persistencia y de barras generados hasta este punto pueden ser consultados aqui: [link a la graficas](https://photos.app.goo.gl/kzDA4EHaDGGHY5cAA)
+
+
+
+
+ 

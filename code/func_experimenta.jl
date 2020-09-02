@@ -89,7 +89,7 @@ function recuperar_red(tamanos, id,num_epochs)
         ruta = "data/experimental/experimento_"*string(id)* "/pesos/epoch_"* string(epoch)* ".csv"
         
         data = readdlm(ruta, ',')
-        println("archivo abierto")
+        #println("archivo abierto")
 
         array_bias = []
         array_weigths = []
@@ -102,7 +102,7 @@ function recuperar_red(tamanos, id,num_epochs)
             end
             prev = reshape(prev,:,1) #Lo convertimos en un vector columna
             bias = prev[1:tamanos[lay+1]]
-            println("el tipo del vias es:  " * string(typeof(bias)))
+            #println("el tipo del vias es:  " * string(typeof(bias)))
             weight = reshape(prev[tamanos[lay+1]+1:length(prev)], tamanos[lay+1], tamanos[lay])
             push!(array_bias, bias)
             push!(array_weigths, weight)
@@ -115,22 +115,27 @@ function recuperar_red(tamanos, id,num_epochs)
 end
 
 
-function experimento_preentrenado(redes, metodo, norma, tamano_muestra, arquitectura, performance; dimensiones =1)
+function experimento_preentrenado(redes, tamano_muestra,id )
     #=
     Esta funcion recibe como argumento un array con los tamanos de cada uno de las capas,
     un array de matrices de pesos y un arrray de vectores de biases
     =#
+    alpha_vectores = []
+    betta_vectores = []
+    muestra  = muestrea(tamano_muestra)
 
-    dist_mat = exp_DistMat( redes, norma, tamano_muestra, metodo)
-
-    eirene_objs = []
-    for matriz in dist_mat
-        c = eirene(matriz, maxdim = dimensiones)
-        push!(eirene_objs, c)
+    #Se crean los nuevos vectores de activaccion los diferentes metodos disponibles
+    for red in redes
+        push!(alpha_vectores, alpha_neuronas(red, muestra,false))
+        push!(betta_vectores,  betta_neuronas(red, muestra, false))
     end
-    epocas = redes
-    return Exp_Red_Neu(arquitectura, performance, epocas, dist_mat, eirene_objs)
     
+    for epoch in 1:length(redes)
+        save_vectors(alpha_vectores[epoch], "alpha", id, string(epoch))
+        save_vectors(betta_vectores[epoch], "betta", id, string(epoch))
+    end
+
+    println("Experimento terminado.")
     
 end
 
