@@ -1,0 +1,298 @@
+┌ Info: Experimento incializado
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:73
+┌ Info: Identificador de experimento =  familia_2experimento_7
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:74
+┌ Info: Fecha de inicializacion =  2020-09-05T23:56:19.944
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:75
+┌ Info: Arquitectura  =  [784, 50, 50, 50, 10]
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:76
+┌ Info: performance deseado = 95
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:77
+┌ Info: Entrenamiento Iniciado en la fecha =  2020-09-05T23:56:20.36
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:212
+┌ Info: Epoca terminada en la fecha =  2020-09-05T23:56:48.5
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  1 = 9.67 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  5.074789737291763
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-05T23:57:16.672
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  2 = 10.09 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.3957364960637
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-05T23:57:44.816
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  3 = 9.91 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.241576825833241
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-05T23:58:12.909
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  4 = 10.639999999999999 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.306971948264716
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-05T23:58:41.058
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  5 = 10.09 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.0478468306618565
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-05T23:59:09.22
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  6 = 9.610000000000001 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.241576825833241
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-05T23:59:37.453
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  7 = 9.15 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.41821201605393
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:00:05.576
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  8 = 10.9 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.594385860416213
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:00:33.551
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  9 = 10.299999999999999 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  3.959370678212615
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:01:01.525
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  10 = 9.83 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.1665364076773805
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:01:29.527
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  11 = 9.15 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.336359160796888
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:01:57.645
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  12 = 9.9 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.594385860416213
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:02:25.786
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  13 = 10.09 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.310634430755288
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:02:53.886
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  14 = 10.9 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.241576825833241
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:03:21.925
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  15 = 10.299999999999999 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  3.959370678212615
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:03:50.047
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  16 = 10.9 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.1665364076773805
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:04:18.229
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  17 = 9.91 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  3.959370678212615
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:04:46.309
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  18 = 10.9 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.306971948264716
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:05:14.378
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  19 = 9.15 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  3.959370678212615
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:05:42.363
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  20 = 10.09 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.594385860416213
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:06:10.435
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  21 = 9.15 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.241576825833241
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:06:38.498
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  22 = 9.83 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.594385860416213
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:07:06.613
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  23 = 10.639999999999999 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.336359160796888
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:07:34.721
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  24 = 10.9 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.0478468306618565
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:08:02.846
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  25 = 10.299999999999999 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  3.959370678212615
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:08:30.923
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  26 = 9.83 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.1665364076773805
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:08:58.981
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  27 = 9.91 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.336359160796888
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:09:26.996
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  28 = 9.15 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.306971948264716
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:09:55.084
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  29 = 9.9 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.594385860416213
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:10:23.184
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  30 = 10.639999999999999 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.310634430755288
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:10:51.198
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  31 = 9.610000000000001 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.0478468306618565
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:11:19.27
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  32 = 9.67 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.41821201605393
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:11:47.375
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  33 = 9.610000000000001 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.3957364960637
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:12:15.459
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  34 = 9.15 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.41821201605393
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:12:43.623
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  35 = 9.91 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.594385860416213
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:13:11.787
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  36 = 10.299999999999999 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.306971948264716
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:13:39.811
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  37 = 9.15 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.1665364076773805
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:14:07.86
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  38 = 9.91 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.594385860416213
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:14:35.741
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  39 = 9.15 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.306971948264716
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:15:03.807
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  40 = 10.299999999999999 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.594385860416213
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:15:31.92
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  41 = 9.83 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.1665364076773805
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:16:00.055
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  42 = 10.639999999999999 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.336359160796888
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:16:28.186
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  43 = 9.67 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.0478468306618565
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:16:56.283
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  44 = 10.09 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.3957364960637
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:17:25.271
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  45 = 9.67 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.241576825833241
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:17:53.428
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  46 = 9.83 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.3957364960637
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: Epoca terminada en la fecha =  2020-09-06T00:18:21.483
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:241
+┌ Info: performance logrado en epoca:  47 = 9.9 por ciento
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
+┌ Info: valor de la eta:  4.336359160796888
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:243
+┌ Info: El aprendizaje se estanco en la epoca:  47con el desempeno: 9.9
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:223
+┌ Info: Entrenamiento terminado en la fecha =  2020-09-06T00:18:21.483
+└ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:247

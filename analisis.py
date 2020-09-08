@@ -24,7 +24,7 @@ from gudhi.representations import DiagramSelector, Clamping, Landscape, Silhouet
 
 
 def get_points(id_exp,epoch, metodo):
-    #Este metodo obtiene los puntos de nuestro espacio a estudiar 
+    #Este metodo obtiene los vectores generados con vectores.ipynb 
     route = "data/experimental/experimento_"+str(id_exp)+"/activaciones/vectores_"+str(metodo)+"_epoch"+str(epoch)+".csv"
     b = [] #Lista de puntos
     with open(route, newline='') as csvfile:
@@ -34,15 +34,16 @@ def get_points(id_exp,epoch, metodo):
     return b 
 
 def generate_tree(id_exp, epoch,metodo):
+    #Este metodo permite crear un simplex tree usando 
     print("leido")
     #TODO Corregir este hardcodeo 
-    points = get_points(id_exp,epoch,metodo)
-    skeleton  = gd.AlphaComplex(points)
+    data = get_points(id_exp,epoch,metodo)
+    skeleton  = gd.AlphaComplex(points=data)
     print("esqueletolisto")
 
-    cech_simplex_tree = skeleton.create_simplex_tree()
+    alpha_simplex_tree = skeleton.create_simplex_tree()
     print("listo")
-    return cech_simplex_tree
+    return alpha_simplex_tree
 
 
 def generate_barcode(per,id_exp,metodo,epoch):
@@ -65,8 +66,11 @@ nombres = [ "experimento_" + str(i) for i in [1,2,3,4] ]
 for i in range(0, len(tamanos)):
     for e in range(1,epochs[i]+1):
         tree = generate_tree(nombres[i], e , "betta" )
-        tree.compute_persistence() # IDEA Puedo agilizar este proceso seleccionando un campo diferente ? 
-        generate_barcode(tree.persistence_intervals_in_dimension(1), nombres[i], "betta",e)
-        generate_persistence_diagram(tree.persistence_intervals_in_dimension(1), nombres[i], "betta",e)
+        tree.compute_persistence()
+
+
+        # IDEA Puedo agilizar este proceso seleccionando un campo diferente ? 
+        generate_barcode(tree.persistence_intervals_in_dimension(0), nombres[i], "betta",e)
+        generate_persistence_diagram(tree.persistence_intervals_in_dimension(0), nombres[i], "betta",e)
 
 

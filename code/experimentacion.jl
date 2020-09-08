@@ -11,16 +11,19 @@ include("training_data.jl")
 
 tamanos = [[784,30,10],[784, 50, 50, 50, 10], [784, 300, 10], [784, 12, 12, 12, 12, 12, 10]] 
 
-nombres = [ "experimento_" * string(i) for i in 1:length(tamanos) ]
+nombres = [ "familia_" * string(i) for i in 1:length(tamanos) ]
 #experimento = experimento_simple(tamanos[1], 95, nombres[1], max_ejec = 60)
 #red_salvada = recuperar_red(tamanos[1], nombres[1],60)
 #experimento = experimento_preentrenado(red_salvada, "alpha", norm, 20, tamanos[1], 95)
 #Quiero ir calculando los pesos que voy a analizar despues
 
 for element in 1:length(tamanos)
-    exp = experimento_simple(tamanos[element], 95, nombres[element], max_ejec = 80)
-
+    for iter in 1:10
+        name = nombres[element]*"experimento_"*string(iter)
+        exp = experimento_simple(tamanos[element], 95, name, max_ejec = 80)
+    end
 end
 
 #exp_plotbettivsepochs(e, 1)
 #exp_plotpersisvsepoch(experimento, 1)
+

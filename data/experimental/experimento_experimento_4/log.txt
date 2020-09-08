@@ -352,7 +352,7 @@
 └ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:237
 ┌ Info: valor de la eta:  0.028273935465554782
 └ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:238
-┌ Info: El aprendizaje se estanco en la epoca:  57con el desempeno: 69.0
+┌ Info: El aprendizaje se estanco en la epoca:  57con el desempeno: 69.0    
 └ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:218
 ┌ Info: Entrenamiento terminado en la fecha =  2020-09-01T00:42:57.409
 └ @ Main /home/rubal501/Desktop/Proyectos/Proyecto-Neuro/code/func_experimenta.jl:242
